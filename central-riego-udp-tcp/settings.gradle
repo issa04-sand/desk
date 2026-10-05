@@ -1,0 +1,3 @@
+rootProject.name = '03_riego_udp'
+include 'PeerA'
+include 'PeerB'

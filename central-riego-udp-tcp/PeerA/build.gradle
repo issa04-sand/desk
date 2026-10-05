@@ -1,0 +1,18 @@
+// PeerA/build.gradle 
+
+application {
+    mainClass = "ui.Main"
+}
+
+jar {
+    manifest {
+	attributes 'Main-Class': 'ui.Main'
+    }
+    archiveBaseName = 'peer-a'
+}
+
+dependencies {
+    // PeerA reutiliza los DTOs y, en las pruebas, levanta los servidores reales.
+    implementation project(':PeerB')
+    testImplementation project(':PeerB')
+}
